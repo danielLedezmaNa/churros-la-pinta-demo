@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Pinta Pozos — Churros artesanales en Villa de Pozos, S.L.P.</title>
+<meta name="description" content="Churros artesanales recién hechos en Villa de Pozos, San Luis Potosí. Rellenos de cajeta y Nutella, chocolate oaxaqueño, café de olla y helado artesanal. Abierto de miércoles a lunes, 4:30 a 10:00 pm.">
+<meta name="theme-color" content="#221812">
+
+<!-- Proyecto conceptual de portafolio: no debe competir en buscadores con el negocio real. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="La Pinta Pozos">
+<meta property="og:title" content="La Pinta Pozos — Churros artesanales en Villa de Pozos, S.L.P.">
+<meta property="og:description" content="Churros recién hechos cada tarde, chocolate oaxaqueño y helado artesanal en Villa de Pozos, San Luis Potosí.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23221812'/%3E%3Cg transform='translate(6,4)' fill='none' stroke='%23D98A3D' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M12 20 C12 12, 22 10, 26 16 C30 10, 40 12, 40 20 C40 30, 26 40, 26 40 C26 40, 12 30, 12 20 Z'/%3E%3Cpath d='M20 46 Q26 40 32 46'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark:#221812;
+    --bg-dark-2:#2c2019;
+    --parchment:#f2e3c9;
+    --parchment-2:#e9d5ae;
+    --caramel:#d98a3d;
+    --cajeta:#a6452a;
+    --line:rgba(242,227,201,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    background:var(--bg-dark);
+    color:var(--parchment);
+    line-height:1.5;
+  }
+  h1,h2,h3{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:700;
+    line-height:1.05;
+  }
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+
+  /* papel picado border strip */
+  .picado{
+    height:22px;
+    background-image:
+      radial-gradient(circle at 10px 0, transparent 9px, var(--bg-dark) 10px),
+      linear-gradient(var(--caramel), var(--caramel));
+    background-size:20px 22px, 100% 6px;
+    background-repeat:repeat-x, no-repeat;
+    background-position:0 0, 0 0;
+  }
+
+  /* HERO */
+  header.hero{
+    padding:88px 0 72px;
+    text-align:center;
+    position:relative;
+  }
+  .eyebrow-mark{
+    width:64px; height:64px; margin:0 auto 28px;
+  }
+  header.hero h1{
+    font-size:clamp(2.6rem, 7vw, 5rem);
+    letter-spacing:-0.01em;
+    color:var(--parchment);
+  }
+  header.hero h1 span{
+    display:block;
+    font-size:0.36em;
+    font-weight:400;
+    font-family:'Work Sans', sans-serif;
+    color:var(--caramel);
+    margin-top:14px;
+    letter-spacing:0.02em;
+  }
+  .hero-meta{
+    margin-top:38px;
+    display:flex;
+    gap:36px;
+    justify-content:center;
+    flex-wrap:wrap;
+    font-size:0.98rem;
+    color:var(--parchment-2);
+  }
+  .hero-meta div{text-align:left;}
+  .hero-meta strong{
+    display:block;
+    color:var(--caramel);
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:600;
+    font-size:0.82rem;
+    margin-bottom:4px;
+  }
+  .btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:14px 34px;
+    background:var(--caramel);
+    color:var(--bg-dark);
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:2px;
+  }
+
+  /* STORY */
+  section.story{
+    background:var(--parchment);
+    color:var(--bg-dark);
+    padding:80px 0;
+  }
+  .story-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:60px;
+    align-items:center;
+  }
+  .story h2{font-size:clamp(1.9rem, 4vw, 2.6rem); margin-bottom:22px;}
+  .story p{font-size:1.05rem; max-width:46ch;}
+  .story p + p{margin-top:16px;}
+  .molinillo{width:100%; max-width:280px; margin:0 auto;}
+
+  /* MENU */
+  section.menu{padding:90px 0 100px;}
+  section.menu > .wrap > h2{
+    text-align:center;
+    font-size:clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom:8px;
+  }
+  section.menu > .wrap > p.sub{
+    text-align:center;
+    color:var(--parchment-2);
+    margin-bottom:56px;
+  }
+  .menu-cols{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:0;
+  }
+  .menu-col{
+    padding:0 26px;
+    border-left:1px solid var(--line);
+  }
+  .menu-col:first-child{border-left:none; padding-left:0;}
+  .menu-col h3{
+    color:var(--caramel);
+    font-size:1.1rem;
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+  }
+  .menu-item{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    font-size:0.92rem;
+    padding:9px 0;
+  }
+  .menu-item span:first-child{color:var(--parchment);}
+  .menu-item span:last-child{color:var(--parchment-2); white-space:nowrap;}
+  .menu-note{
+    margin-top:22px;
+    font-size:0.82rem;
+    color:var(--parchment-2);
+    opacity:0.75;
+  }
+
+  /* VISIT */
+  section.visit{
+    background:var(--bg-dark-2);
+    padding:80px 0;
+  }
+  .visit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  .visit h2{font-size:clamp(1.9rem, 4vw, 2.4rem); margin-bottom:24px;}
+  .hours-table{width:100%; border-collapse:collapse; margin-bottom:28px;}
+  .hours-table td{
+    padding:9px 0;
+    border-bottom:1px solid var(--line);
+    font-size:0.95rem;
+  }
+  .hours-table td:last-child{text-align:right; color:var(--parchment-2);}
+  .hours-table tr.closed td{color:var(--cajeta); font-weight:600;}
+  address{font-style:normal; margin-bottom:22px; color:var(--parchment-2);}
+
+  footer{
+    padding:38px 0;
+    text-align:center;
+    font-size:0.85rem;
+    color:var(--parchment-2);
+    opacity:0.7;
+  }
+  footer .demo-note{
+    display:block;
+    margin-top:10px;
+    font-size:0.76rem;
+    opacity:0.8;
+  }
+
+  @media (max-width:820px){
+    .story-grid, .visit-grid{grid-template-columns:1fr; gap:36px;}
+    .menu-cols{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .menu-col{border-left:none; padding-left:0;}
+    .menu-col:nth-child(odd){padding-right:16px;}
+    .menu-col:nth-child(even){padding-left:16px; border-left:1px solid var(--line);}
+  }
+  @media (max-width:520px){
+    .menu-cols{grid-template-columns:1fr;}
+    .menu-col:nth-child(even){border-left:none; padding-left:0;}
+    .hero-meta{flex-direction:column; gap:18px; align-items:center;}
+    .hero-meta div{text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<div class="picado"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="eyebrow-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 20 C12 12, 22 10, 26 16 C30 10, 40 12, 40 20 C40 30, 26 40, 26 40 C26 40, 12 30, 12 20 Z" stroke="#D98A3D" stroke-width="2.2"/>
+      <path d="M20 46 Q26 40 32 46" stroke="#D98A3D" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <h1>La Pinta Pozos<span>Churros artesanales en Villa de Pozos</span></h1>
+    <div class="hero-meta">
+      <div>
+        <strong>Horario</strong>
+        Miércoles a lunes · martes cerrado<br>4:30 pm – 10:00 pm
+      </div>
+      <div>
+        <strong>Ubicación</strong>
+        Blvd. San Antonio 103<br>Col. San Francisco de los Pozos
+      </div>
+    </div>
+    <a class="btn" href="#visitanos">Cómo llegar</a>
+  </div>
+</header>
+
+<section class="story">
+  <div class="wrap story-grid">
+    <div>
+      <h2>Churro recién hecho, cada tarde en Pozos</h2>
+      <p>En La Pinta Pozos freímos cada churro al momento: tradicionales, rellenos de cajeta, Nutella o queso con zarzamora, y los acompañamos con chocolate oaxaqueño, café de olla y helado artesanal.</p>
+      <p>Un lugar hecho para sentarse un rato en Villa de Pozos — el municipio más joven de San Luis Potosí, con raíces que se remontan a la hacienda de San Francisco de los Pozos.</p>
+    </div>
+    <svg class="molinillo" viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="100" y1="10" x2="100" y2="230" stroke="#A6452A" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="100" cy="245" r="10" fill="#A6452A"/>
+      <g stroke="#221812" stroke-width="5" stroke-linecap="round">
+        <line x1="70" y1="70" x2="130" y2="70"/>
+        <line x1="65" y1="110" x2="135" y2="110"/>
+        <line x1="70" y1="150" x2="130" y2="150"/>
+        <line x1="75" y1="190" x2="125" y2="190"/>
+      </g>
+      <circle cx="70" cy="70" r="6" fill="#221812"/>
+      <circle cx="130" cy="70" r="6" fill="#221812"/>
+      <circle cx="65" cy="110" r="6" fill="#221812"/>
+      <circle cx="135" cy="110" r="6" fill="#221812"/>
+      <circle cx="70" cy="150" r="6" fill="#221812"/>
+      <circle cx="130" cy="150" r="6" fill="#221812"/>
+      <circle cx="75" cy="190" r="6" fill="#221812"/>
+      <circle cx="125" cy="190" r="6" fill="#221812"/>
+    </svg>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2>Del menú</h2>
+    <p class="sub">Una probadita — el menú completo lo encuentras en el local</p>
+    <div class="menu-cols">
+      <div class="menu-col">
+        <h3>Churros</h3>
+        <div class="menu-item"><span>Tradicionales, 6 pz</span><span>$63</span></div>
+        <div class="menu-item"><span>Rellenos, 1 pz</span><span>$30</span></div>
+        <div class="menu-item"><span>Bites, 20 pz</span><span>$50</span></div>
+        <div class="menu-item"><span>Chocochurro relleno</span><span>$42</span></div>
+        <p class="menu-note">Sabores: cajeta, lechera, Nutella, queso con zarzamora y más — pregunta por el sabor del mes.</p>
+      </div>
+      <div class="menu-col">
+        <h3>Chocolate y bebidas</h3>
+        <div class="menu-item"><span>Oaxaca de leche</span><span>$60</span></div>
+        <div class="menu-item"><span>Español</span><span>$58</span></div>
+        <div class="menu-item"><span>Malteada</span><span>$67</span></div>
+        <div class="menu-item"><span>Limonada flotante</span><span>$60</span></div>
+      </div>
+      <div class="menu-col">
+        <h3>Café y lattes</h3>
+        <div class="menu-item"><span>Café de olla</span><span>$40</span></div>
+        <div class="menu-item"><span>Olla latte</span><span>$54</span></div>
+        <div class="menu-item"><span>Chai latte</span><span>$58</span></div>
+        <div class="menu-item"><span>Taro latte</span><span>$58</span></div>
+      </div>
+      <div class="menu-col">
+        <h3>Helados</h3>
+        <div class="menu-item"><span>Mini, 1 bola</span><span>$44</span></div>
+        <div class="menu-item"><span>Chico, 2 bolas</span><span>$75</span></div>
+        <div class="menu-item"><span>Sándwich de churro con helado</span><span>$62</span></div>
+        <div class="menu-item"><span>Helado bite</span><span>$69</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visitanos">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Visítanos</h2>
+      <address>
+        Blvd. San Antonio 103<br>
+        Col. San Francisco de los Pozos<br>
+        78427 Villa de Pozos, S.L.P.
+      </address>
+      <table class="hours-table">
+        <tr class="closed"><td>Martes</td><td>Cerrado</td></tr>
+        <tr><td>Miércoles</td><td>4:30 pm – 10:00 pm</td></tr>
+        <tr><td>Jueves</td><td>4:30 pm – 10:00 pm</td></tr>
+        <tr><td>Viernes</td><td>4:30 pm – 10:00 pm</td></tr>
+        <tr><td>Sábado</td><td>4:30 pm – 10:00 pm</td></tr>
+        <tr><td>Domingo</td><td>4:30 pm – 10:00 pm</td></tr>
+        <tr><td>Lunes</td><td>4:30 pm – 10:00 pm</td></tr>
+      </table>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Blvd.+San+Antonio+103+Col.+San+Francisco+de+los+Pozos+78427+Villa+de+Pozos+San+Luis+Potosi" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div>
+    <div>
+      <h2 style="visibility:hidden">.</h2>
+      <p style="color:var(--parchment-2); font-size:1.02rem; max-width:40ch;">
+        Servicio solo en el local — llega, elige tu churro y siéntate a disfrutarlo recién hecho.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  La Pinta Pozos — Villa de Pozos, S.L.P.
+  <span class="demo-note">Proyecto conceptual de portafolio. Sitio de demostración sin relación comercial con el negocio; los datos son ilustrativos.</span>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Pinta Pozos",
+  "description": "Churros artesanales recién hechos, chocolate oaxaqueño, café de olla y helado artesanal en Villa de Pozos, San Luis Potosí.",
+  "servesCuisine": "Churros y postres",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Blvd. San Antonio 103, Col. San Francisco de los Pozos",
+    "addressLocality": "Villa de Pozos",
+    "addressRegion": "San Luis Potosí",
+    "postalCode": "78427",
+    "addressCountry": "MX"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday"],
+      "opens": "16:30",
+      "closes": "22:00"
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

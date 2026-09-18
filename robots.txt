@@ -1,0 +1,4 @@
+# Proyecto conceptual de portafolio: sitio de demostración, no debe indexarse
+# para no competir en buscadores con el negocio real.
+User-agent: *
+Disallow: /
